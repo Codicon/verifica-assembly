@@ -1,6 +1,6 @@
 ﻿namespace VerificarAssembly
 {
-    partial class frmPrincipal
+    partial class FormPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
             this.txtDiretorio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
@@ -40,19 +40,19 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnVerificar
             // 
-            this.button1.Location = new System.Drawing.Point(512, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Verificar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVerificar.Location = new System.Drawing.Point(512, 4);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(75, 23);
+            this.btnVerificar.TabIndex = 0;
+            this.btnVerificar.Text = "Verificar";
+            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // txtDiretorio
             // 
-            this.txtDiretorio.Location = new System.Drawing.Point(64, 2);
+            this.txtDiretorio.Location = new System.Drawing.Point(64, 6);
             this.txtDiretorio.Name = "txtDiretorio";
             this.txtDiretorio.Size = new System.Drawing.Size(340, 20);
             this.txtDiretorio.TabIndex = 1;
@@ -113,7 +113,7 @@
             // 
             // btnProcurar
             // 
-            this.btnProcurar.Location = new System.Drawing.Point(431, -1);
+            this.btnProcurar.Location = new System.Drawing.Point(431, 4);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(75, 23);
             this.btnProcurar.TabIndex = 8;
@@ -121,7 +121,7 @@
             this.btnProcurar.UseVisualStyleBackColor = true;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
-            // frmPrincipal
+            // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,10 +134,9 @@
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDiretorio);
-            this.Controls.Add(this.button1);
-            this.Name = "frmPrincipal";
+            this.Controls.Add(this.btnVerificar);
+            this.Name = "FormPrincipal";
             this.Text = "Verifica Compilação de Assembly";
-            this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,7 +144,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.TextBox txtDiretorio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblInfo;

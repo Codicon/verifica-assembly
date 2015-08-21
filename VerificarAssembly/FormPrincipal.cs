@@ -7,14 +7,14 @@ using System.Windows.Forms;
 
 namespace VerificarAssembly
 {
-    public partial class frmPrincipal : Form
+    public partial class FormPrincipal : Form
     {
-        public frmPrincipal()
+        public FormPrincipal()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnVerificar_Click(object sender, EventArgs e)
         {
             txtDllDebug.Text = "";
             txtDllRelease.Text = "";
@@ -22,12 +22,12 @@ namespace VerificarAssembly
 
             if (!Directory.Exists(diretorio))
             {
-                lblInfo.Text = "Diretório Inválido";
+                lblInfo.Text = "Diretório Inválido!";
                 return;
             }
 
-            List<string> listaArquivosDeb = new List<string>();
-            List<string> listaArquivosRel = new List<string>();
+            var listaArquivosDeb = new List<string>();
+            var listaArquivosRel = new List<string>();
 
             string[] filePaths = Directory.GetFiles(diretorio, "*.dll");
             string nomeDll;
@@ -58,12 +58,6 @@ namespace VerificarAssembly
             foreach (var item in listaArquivosRel)
                 txtDllRelease.AppendText(item + Environment.NewLine);
 
-
-        }
-
-        private void frmPrincipal_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)
@@ -71,16 +65,14 @@ namespace VerificarAssembly
             if (folderBrowserDialog1.ShowDialog(this) == DialogResult.OK)
             {
                 txtDiretorio.Text = folderBrowserDialog1.SelectedPath;
-                button1_Click(null, null);
+                btnVerificar_Click(null, null);
             }
         }
 
         private void txtDiretorio_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                button1_Click(null, null);
+                btnVerificar_Click(null, null);
         }
-
-
     }
 }
